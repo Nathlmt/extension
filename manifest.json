@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name":    "Test Extension",
+    "version": "0.0",
+
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+        "matches": ["https://ctt-sis.hust.edu.vn/Students/TimetablesTemp.aspx"],
+        "js":      ["content.js"]
+    }],
+    "browser_action": {
+        "default_title": "Test Extension"
+    },
+
+    "permissions": ["activeTab"]
+}
